@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Local Small Business Reviews — Independent Rankings of Top Local Businesses</title>
+<meta name="description" content="Independent reviews and rankings of top local small businesses across major US cities. Verified listings, schema-optimized for AI search, updated quarterly.">
+<link rel="canonical" href="https://localsmallbusinessreviews.com/">
+<meta property="og:title" content="Local Small Business Reviews — Top Local Businesses">
+<meta property="og:description" content="Independent rankings of the best local small businesses in your city.">
+<meta property="og:url" content="https://localsmallbusinessreviews.com/">
+<meta property="og:type" content="website">
+
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Local Small Business Reviews",
+  "url": "https://localsmallbusinessreviews.com",
+  "description": "Independent publishing network providing city-specific reviews and rankings of top local small businesses across major US metro areas."
+}
+</script>
+
+<style>
+:root {
+  --black: #0a0a0a; --black-mid: #141414;
+  --cream: #faf7f2; --cream-mid: #f0ebe1; --paper: #f7f2e8;
+  --ink: #1a1a1a; --ink-2: #3a3a3a; --ink-3: #6a6a6a; --ink-4: #9a9a9a;
+  --accent: #c4441f; --accent-dark: #8e2f15;
+  --gold: #b8954f; --gold-light: #d4b67a;
+  --border: #e5dfd2; --border-dark: #d4cbb7;
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Inter', -apple-system, sans-serif;
+  --max-w: 1200px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-body); background: var(--cream); color: var(--ink); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+
+.nav { padding: 22px 28px; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; backdrop-filter: blur(20px); background: rgba(250, 247, 242, 0.96); }
+.nav-inner { max-width: var(--max-w); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+.nav-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--ink); }
+.nav-mark { width: 38px; height: 38px; border-radius: 50%; background: var(--black); color: var(--cream); display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-style: italic; font-size: 18px; font-weight: 500; }
+.nav-brand-text { font-family: var(--font-display); font-size: 20px; font-weight: 500; letter-spacing: -0.5px; }
+.nav-brand-text em { font-style: italic; color: var(--accent); }
+.nav-cta { background: var(--accent); color: var(--cream); padding: 10px 22px; border-radius: 4px; font-size: 13px; font-weight: 600; text-decoration: none; transition: all 0.2s; }
+.nav-cta:hover { background: var(--accent-dark); }
+
+.hero { padding: 100px 28px 80px; background: linear-gradient(180deg, var(--cream) 0%, var(--cream-mid) 100%); text-align: center; position: relative; overflow: hidden; }
+.hero::before { content: ''; position: absolute; top: -100px; right: -100px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(196, 68, 31, 0.06) 0%, transparent 70%); pointer-events: none; }
+.hero-inner { max-width: 900px; margin: 0 auto; position: relative; z-index: 1; }
+.hero-eyebrow { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.18em; color: var(--accent); margin-bottom: 28px; display: inline-block; }
+.hero h1 { font-family: var(--font-display); font-size: 68px; font-weight: 500; line-height: 1.05; letter-spacing: -2px; margin-bottom: 28px; }
+.hero h1 em { font-style: italic; color: var(--accent); }
+.hero-sub { font-size: 21px; color: var(--ink-2); line-height: 1.5; max-width: 700px; margin: 0 auto 44px; }
+
+.cities { padding: 80px 28px; background: var(--cream); }
+.cities-inner { max-width: var(--max-w); margin: 0 auto; }
+.section-eyebrow { display: block; text-align: center; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.18em; color: var(--accent); margin-bottom: 14px; }
+.section-title { font-family: var(--font-display); font-size: 44px; font-weight: 500; text-align: center; margin-bottom: 16px; letter-spacing: -1px; }
+.section-title em { font-style: italic; color: var(--accent); }
+.section-sub { text-align: center; font-size: 16px; color: var(--ink-3); max-width: 600px; margin: 0 auto 56px; }
+
+.cities-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.city-card { background: var(--paper); border: 1px solid var(--border); border-radius: 12px; padding: 36px 28px; text-align: center; text-decoration: none; color: var(--ink); transition: all 0.3s; display: block; }
+.city-card:hover { border-color: var(--accent); transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,0.06); }
+.city-card.live { border-color: var(--accent); background: linear-gradient(180deg, var(--cream) 0%, var(--paper) 100%); }
+.city-card-name { font-family: var(--font-display); font-size: 28px; font-weight: 600; letter-spacing: -0.5px; margin-bottom: 8px; }
+.city-card-name em { font-style: italic; color: var(--accent); }
+.city-card-state { font-size: 13px; color: var(--ink-3); margin-bottom: 18px; }
+.city-card-status { display: inline-block; padding: 4px 12px; border-radius: 4px; font-size: 10.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; }
+.city-card-status.live { background: var(--accent); color: var(--cream); }
+.city-card-status.coming { background: var(--border-dark); color: var(--ink-2); }
+
+.what-we-do { padding: 100px 28px; background: var(--black); color: var(--cream); }
+.what-we-do-inner { max-width: var(--max-w); margin: 0 auto; }
+.what-we-do .section-eyebrow { color: var(--gold-light); }
+.what-we-do .section-title { color: var(--cream); }
+.what-we-do .section-title em { color: var(--gold-light); }
+.what-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; margin-top: 56px; }
+.what-card { background: var(--black-mid); border: 1px solid rgba(184, 149, 79, 0.2); border-radius: 12px; padding: 36px 32px; }
+.what-num { font-family: var(--font-display); font-style: italic; font-size: 48px; font-weight: 500; color: var(--gold-light); line-height: 1; margin-bottom: 18px; opacity: 0.5; }
+.what-card h3 { font-family: var(--font-display); font-size: 24px; font-weight: 600; color: var(--cream); margin-bottom: 14px; letter-spacing: -0.4px; }
+.what-card p { font-size: 14.5px; color: rgba(250, 247, 242, 0.75); line-height: 1.65; }
+
+.cta-section { padding: 100px 28px; background: var(--cream-mid); text-align: center; }
+.cta-section h2 { font-family: var(--font-display); font-size: 48px; font-weight: 500; line-height: 1.1; letter-spacing: -1px; margin-bottom: 20px; }
+.cta-section h2 em { font-style: italic; color: var(--accent); }
+.cta-section p { font-size: 17px; color: var(--ink-2); max-width: 580px; margin: 0 auto 36px; }
+.btn-primary { background: var(--black); color: var(--cream); padding: 18px 36px; border-radius: 6px; font-size: 14px; font-weight: 600; text-decoration: none; letter-spacing: 0.03em; display: inline-flex; align-items: center; gap: 10px; transition: all 0.25s; }
+.btn-primary:hover { background: var(--accent); transform: translateY(-1px); }
+.btn-primary::after { content: '→'; transition: transform 0.2s; }
+.btn-primary:hover::after { transform: translateX(4px); }
+
+footer { background: var(--black); color: rgba(250, 247, 242, 0.5); padding: 32px 28px; text-align: center; font-size: 12.5px; border-top: 1px solid rgba(184, 149, 79, 0.15); }
+footer a { color: var(--gold-light); text-decoration: none; margin: 0 12px; }
+
+@media (max-width: 900px) {
+  .hero { padding: 56px 24px 48px; }
+  .hero h1 { font-size: 40px; letter-spacing: -1px; }
+  .hero-sub { font-size: 17px; }
+  .cities-grid { grid-template-columns: repeat(2, 1fr); }
+  .what-grid { grid-template-columns: 1fr; }
+  .section-title { font-size: 32px; }
+  .cta-section h2 { font-size: 32px; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-brand">
+      <div class="nav-mark">L</div>
+      <div class="nav-brand-text">Local Small Business <em>Reviews</em></div>
+    </a>
+    <a href="/get-listed.html" class="nav-cta">Get Listed</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Independent Local Business Rankings</div>
+    <h1>The best small businesses in <em>your city</em>.</h1>
+    <p class="hero-sub">Verified rankings of top local small businesses across major US metros. Schema-optimized for AI search, updated quarterly, and built for buyers who want answers — not ads.</p>
+  </div>
+</section>
+
+<section class="cities">
+  <div class="cities-inner">
+    <span class="section-eyebrow">Browse by City</span>
+    <h2 class="section-title">Find rankings in <em>your market</em>.</h2>
+    <p class="section-sub">Each city covers the industries that matter most to local buyers — real estate, marketing, legal, financial services, concierge medicine, and more.</p>
+    
+    <div class="cities-grid">
+      <a href="/miami/" class="city-card live">
+        <div class="city-card-name"><em>Miami</em></div>
+        <div class="city-card-state">Florida</div>
+        <span class="city-card-status live">Live Now</span>
+      </a>
+      <div class="city-card">
+        <div class="city-card-name">New York</div>
+        <div class="city-card-state">New York</div>
+        <span class="city-card-status coming">Coming Soon</span>
+      </div>
+      <div class="city-card">
+        <div class="city-card-name">Los Angeles</div>
+        <div class="city-card-state">California</div>
+        <span class="city-card-status coming">Coming Soon</span>
+      </div>
+      <div class="city-card">
+        <div class="city-card-name">Chicago</div>
+        <div class="city-card-state">Illinois</div>
+        <span class="city-card-status coming">Coming Soon</span>
+      </div>
+      <div class="city-card">
+        <div class="city-card-name">Boston</div>
+        <div class="city-card-state">Massachusetts</div>
+        <span class="city-card-status coming">Coming Soon</span>
+      </div>
+      <div class="city-card">
+        <div class="city-card-name">Dallas</div>
+        <div class="city-card-state">Texas</div>
+        <span class="city-card-status coming">Coming Soon</span>
+      </div>
+      <div class="city-card">
+        <div class="city-card-name">Atlanta</div>
+        <div class="city-card-state">Georgia</div>
+        <span class="city-card-status coming">Coming Soon</span>
+      </div>
+      <div class="city-card">
+        <div class="city-card-name">Seattle</div>
+        <div class="city-card-state">Washington</div>
+        <span class="city-card-status coming">Coming Soon</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="what-we-do">
+  <div class="what-we-do-inner">
+    <span class="section-eyebrow">What We Do</span>
+    <h2 class="section-title">Local rankings, <em>built for buyers</em>.</h2>
+    
+    <div class="what-grid">
+      <div class="what-card">
+        <div class="what-num">01</div>
+        <h3>Verified Rankings</h3>
+        <p>Every business listed goes through editorial verification. We don't accept everyone — we accept the businesses worth listing in your local market.</p>
+      </div>
+      <div class="what-card">
+        <div class="what-num">02</div>
+        <h3>Schema-Tagged for AI</h3>
+        <p>Every listing is structured for ChatGPT, Claude, Perplexity, and Google AI Overviews. When buyers ask AI tools, our rankings get cited.</p>
+      </div>
+      <div class="what-card">
+        <div class="what-num">03</div>
+        <h3>Real Local Operators</h3>
+        <p>Independent rankings of small and medium businesses that actually serve their local markets. Not chains. Not corporates. Real local operators.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <h2>Want your business <em>featured?</em></h2>
+  <p>If you run a top-tier local small business in any of our covered cities and industries, we'd like to hear from you. Application required, editorial verification before listing.</p>
+  <a href="/get-listed.html" class="btn-primary">Apply for Listing</a>
+</section>
+
+<footer>
+  <p>© 2026 Local Small Business Reviews · Independent publishing network</p>
+  <p style="margin-top: 8px;"><a href="/">Home</a><a href="/miami/">Miami</a><a href="/get-listed.html">Get Listed</a><a href="/pages/privacy.html">Privacy</a></p>
+</footer>
+
+</body>
+</html>
