@@ -47,3 +47,4 @@ User-agent: YouBot
 Allow: /
 
 Sitemap: https://localsmallbusinessreviews.com/sitemap.xml
+# Updated 2026-10-21
